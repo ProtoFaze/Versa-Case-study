@@ -3,12 +3,12 @@ import {promises as fs} from 'fs';
 const array : string[] = [];// declare empty string array
 
 for (let i = 1; i<=100; i++){// iterate from 1 to 100
-    // replace values divisible by 3,5,or both with "BiIG", "BANG", "BIGBANG" respectively
+    // replace values divisible by 3,5,or both with "BIG", "BANG", "BIGBANG" respectively
     if(i % 3 === 0 && i % 5 === 0){ 
         array.push("BIGBANG")
-    }if(i % 3 === 0){
+    }else if(i % 3 === 0){
         array.push("BIG")
-    }if(i % 5 === 0){
+    }else if(i % 5 === 0){
         array.push("BANG")
     }else{
         array.push(i.toString())
